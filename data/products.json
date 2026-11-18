@@ -1,0 +1,980 @@
+[
+  {
+    "sku": "DAI-001",
+    "name": "Farm Fresh Whole Milk 1L",
+    "brand": "Meadowland Dairy",
+    "category": "Dairy",
+    "price": 2.49,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 42,
+    "unit": "1L",
+    "location": {
+      "aisle": "Aisle 1",
+      "shelf": "Shelf A (Chilled)",
+      "section": "Dairy & Milk"
+    },
+    "keywords": [
+      "milk",
+      "whole milk",
+      "dairy",
+      "full cream"
+    ],
+    "is_promotional": false
+  },
+  {
+    "sku": "DAI-002",
+    "name": "Organic Almond Milk Unsweetened 1L",
+    "brand": "NutriPure",
+    "category": "Dairy Alternatives",
+    "price": 3.99,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 18,
+    "unit": "1L",
+    "location": {
+      "aisle": "Aisle 1",
+      "shelf": "Shelf C (Plant-based)",
+      "section": "Dairy Alternatives"
+    },
+    "keywords": [
+      "almond milk",
+      "dairy free",
+      "vegan milk",
+      "plant based milk"
+    ],
+    "is_promotional": true
+  },
+  {
+    "sku": "PROD-001",
+    "name": "Hass Avocados (2 Pack)",
+    "brand": "GreenValley Organic",
+    "category": "Produce",
+    "price": 2.99,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 25,
+    "unit": "2 pack",
+    "location": {
+      "aisle": "Produce Island 2",
+      "shelf": "Crate 4",
+      "section": "Fresh Produce"
+    },
+    "keywords": [
+      "avocado",
+      "hass avocado",
+      "avocados",
+      "guacamole"
+    ],
+    "is_promotional": false
+  },
+  {
+    "sku": "PROD-002",
+    "name": "Organic Bananas (Bunch of 5)",
+    "brand": "SunTropics",
+    "category": "Produce",
+    "price": 1.49,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 60,
+    "unit": "bunch (~800g)",
+    "location": {
+      "aisle": "Produce Island 1",
+      "shelf": "Crate 1",
+      "section": "Fresh Fruit"
+    },
+    "keywords": [
+      "banana",
+      "bananas",
+      "fruit",
+      "organic banana"
+    ],
+    "is_promotional": false
+  },
+  {
+    "sku": "BAK-001",
+    "name": "Artisan Sourdough Loaf 500g",
+    "brand": "In-Store Bakery",
+    "category": "Bakery",
+    "price": 4.29,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 8,
+    "unit": "500g",
+    "location": {
+      "aisle": "Bakery Counter",
+      "shelf": "Fresh Bread Shelf 1",
+      "section": "Bakery"
+    },
+    "keywords": [
+      "sourdough",
+      "bread",
+      "loaf",
+      "artisan bread",
+      "bakery"
+    ],
+    "is_promotional": false
+  },
+  {
+    "sku": "BAK-002",
+    "name": "Gluten-Free Seeded Sliced Bread 400g",
+    "brand": "PureBake",
+    "category": "Bakery",
+    "price": 5.19,
+    "currency": "$",
+    "in_stock": false,
+    "stock_quantity": 0,
+    "unit": "400g",
+    "location": {
+      "aisle": "Aisle 4",
+      "shelf": "Gluten-Free Rack",
+      "section": "Specialty Bakery"
+    },
+    "keywords": [
+      "gluten free bread",
+      "gf bread",
+      "seeded bread",
+      "celiac"
+    ],
+    "is_promotional": false
+  },
+  {
+    "sku": "EGG-001",
+    "name": "Free Range Large Brown Eggs (12 Pack)",
+    "brand": "SunnyFields Farm",
+    "category": "Dairy & Eggs",
+    "price": 4.89,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 30,
+    "unit": "Dozen (12 eggs)",
+    "location": {
+      "aisle": "Aisle 1",
+      "shelf": "Shelf D",
+      "section": "Eggs & Butter"
+    },
+    "keywords": [
+      "eggs",
+      "free range eggs",
+      "dozen eggs",
+      "brown eggs"
+    ],
+    "is_promotional": false
+  },
+  {
+    "sku": "SNK-001",
+    "name": "Sea Salt Kettle Cooked Potato Chips 150g",
+    "brand": "CrunchCo",
+    "category": "Snacks",
+    "price": 3.49,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 40,
+    "unit": "150g bag",
+    "location": {
+      "aisle": "Aisle 5",
+      "shelf": "Shelf B",
+      "section": "Chips & Snacks"
+    },
+    "keywords": [
+      "chips",
+      "potato chips",
+      "crisps",
+      "snacks",
+      "kettle chips"
+    ],
+    "is_promotional": true
+  },
+  {
+    "sku": "BEV-001",
+    "name": "Sparkling Mineral Water 1L",
+    "brand": "San Pellegrino",
+    "category": "Beverages",
+    "price": 2.19,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 55,
+    "unit": "1L bottle",
+    "location": {
+      "aisle": "Aisle 6",
+      "shelf": "Shelf A",
+      "section": "Waters & Soft Drinks"
+    },
+    "keywords": [
+      "water",
+      "sparkling water",
+      "soda",
+      "mineral water"
+    ],
+    "is_promotional": false
+  },
+  {
+    "sku": "BEV-002",
+    "name": "100% Valencia Orange Juice No Pulp 1.5L",
+    "brand": "SimplyCitrus",
+    "category": "Beverages",
+    "price": 4.59,
+    "currency": "$",
+    "in_stock": false,
+    "stock_quantity": 0,
+    "unit": "1.5L",
+    "location": {
+      "aisle": "Aisle 1",
+      "shelf": "Chilled Juice Rack",
+      "section": "Chilled Juices"
+    },
+    "keywords": [
+      "orange juice",
+      "oj",
+      "juice",
+      "citrus"
+    ],
+    "is_promotional": false
+  },
+  {
+    "sku": "PROD-003",
+    "name": "Crisp Gala Red Apples 1kg",
+    "brand": "FreshOrchard",
+    "category": "Produce",
+    "price": 3.49,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 40,
+    "unit": "1kg bag",
+    "location": {
+      "aisle": "Produce Island 1",
+      "shelf": "Crate 2",
+      "section": "Fresh Apples & Pears"
+    },
+    "keywords": [
+      "apple",
+      "apples",
+      "gala apples",
+      "red apples",
+      "fruit"
+    ],
+    "is_promotional": false
+  },
+  {
+    "sku": "PROD-004",
+    "name": "Fresh Roma Tomatoes 500g",
+    "brand": "SunRipe Farms",
+    "category": "Produce",
+    "price": 2.29,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 35,
+    "unit": "500g pack",
+    "location": {
+      "aisle": "Produce Island 2",
+      "shelf": "Crate 5",
+      "section": "Fresh Tomatoes"
+    },
+    "keywords": [
+      "tomato",
+      "tomatoes",
+      "roma tomatoes",
+      "salad"
+    ],
+    "is_promotional": true
+  },
+  {
+    "sku": "PROD-005",
+    "name": "Organic Baby Spinach 200g",
+    "brand": "GreenValley Organic",
+    "category": "Produce",
+    "price": 2.99,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 22,
+    "unit": "200g tub",
+    "location": {
+      "aisle": "Produce Island 2",
+      "shelf": "Chilled Rack 1",
+      "section": "Organic Greens"
+    },
+    "keywords": [
+      "spinach",
+      "baby spinach",
+      "salad greens",
+      "organic salad"
+    ],
+    "is_promotional": false
+  },
+  {
+    "sku": "PROD-006",
+    "name": "Yellow Cooking Onions 1kg Bag",
+    "brand": "EarthHarvest",
+    "category": "Produce",
+    "price": 1.99,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 50,
+    "unit": "1kg net",
+    "location": {
+      "aisle": "Produce Island 3",
+      "shelf": "Bin 1",
+      "section": "Root Vegetables"
+    },
+    "keywords": [
+      "onion",
+      "onions",
+      "yellow onions",
+      "cooking onions"
+    ],
+    "is_promotional": false
+  },
+  {
+    "sku": "PROD-007",
+    "name": "Fresh Garlic Bulbs (3 Pack)",
+    "brand": "SunRipe Farms",
+    "category": "Produce",
+    "price": 1.49,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 60,
+    "unit": "3 pack",
+    "location": {
+      "aisle": "Produce Island 3",
+      "shelf": "Basket 2",
+      "section": "Aromatics"
+    },
+    "keywords": [
+      "garlic",
+      "garlic bulb",
+      "garlics",
+      "seasoning"
+    ],
+    "is_promotional": false
+  },
+  {
+    "sku": "PROD-008",
+    "name": "Juicy Eureka Lemons (Bunch of 4)",
+    "brand": "CitrusGrove",
+    "category": "Produce",
+    "price": 2.19,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 30,
+    "unit": "4 pack",
+    "location": {
+      "aisle": "Produce Island 1",
+      "shelf": "Crate 6",
+      "section": "Citrus"
+    },
+    "keywords": [
+      "lemon",
+      "lemons",
+      "citrus",
+      "sour"
+    ],
+    "is_promotional": false
+  },
+  {
+    "sku": "PROD-009",
+    "name": "Sweet Fresh Strawberries 250g",
+    "brand": "BerryDelight",
+    "category": "Produce",
+    "price": 3.99,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 28,
+    "unit": "250g punnet",
+    "location": {
+      "aisle": "Produce Island 1",
+      "shelf": "Chilled Rack 2",
+      "section": "Berries"
+    },
+    "keywords": [
+      "strawberry",
+      "strawberries",
+      "berries",
+      "fresh fruit"
+    ],
+    "is_promotional": true
+  },
+  {
+    "sku": "PROD-010",
+    "name": "Fresh Continental Cucumber",
+    "brand": "GreenValley Organic",
+    "category": "Produce",
+    "price": 1.29,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 45,
+    "unit": "each",
+    "location": {
+      "aisle": "Produce Island 2",
+      "shelf": "Crate 3",
+      "section": "Salad Vegetables"
+    },
+    "keywords": [
+      "cucumber",
+      "cucumbers",
+      "salad"
+    ],
+    "is_promotional": false
+  },
+  {
+    "sku": "DAI-003",
+    "name": "Creamy Pure Salted Butter 250g",
+    "brand": "Meadowland Dairy",
+    "category": "Dairy",
+    "price": 3.29,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 38,
+    "unit": "250g block",
+    "location": {
+      "aisle": "Aisle 1",
+      "shelf": "Shelf B",
+      "section": "Butter & Spreads"
+    },
+    "keywords": [
+      "butter",
+      "salted butter",
+      "dairy",
+      "spread"
+    ],
+    "is_promotional": false
+  },
+  {
+    "sku": "DAI-004",
+    "name": "Aged Sharp Cheddar Cheese Block 300g",
+    "brand": "ArtisanCheddar",
+    "category": "Dairy",
+    "price": 4.89,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 24,
+    "unit": "300g block",
+    "location": {
+      "aisle": "Aisle 1",
+      "shelf": "Shelf D",
+      "section": "Specialty Cheese"
+    },
+    "keywords": [
+      "cheese",
+      "cheddar",
+      "sharp cheddar",
+      "cheddar cheese",
+      "dairy block"
+    ],
+    "is_promotional": true
+  },
+  {
+    "sku": "DAI-005",
+    "name": "Authentic Greek Style Plain Yogurt 500g",
+    "brand": "OikosPure",
+    "category": "Dairy",
+    "price": 3.69,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 20,
+    "unit": "500g tub",
+    "location": {
+      "aisle": "Aisle 1",
+      "shelf": "Shelf C",
+      "section": "Yogurt"
+    },
+    "keywords": [
+      "yogurt",
+      "greek yogurt",
+      "plain yogurt",
+      "probiotic"
+    ],
+    "is_promotional": false
+  },
+  {
+    "sku": "DAI-006",
+    "name": "Oat Milk Barista Edition 1L",
+    "brand": "OatPure",
+    "category": "Dairy Alternatives",
+    "price": 4.19,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 26,
+    "unit": "1L carton",
+    "location": {
+      "aisle": "Aisle 1",
+      "shelf": "Shelf C (Plant-based)",
+      "section": "Dairy Alternatives"
+    },
+    "keywords": [
+      "oat milk",
+      "plant milk",
+      "vegan milk",
+      "barista oat milk"
+    ],
+    "is_promotional": false
+  },
+  {
+    "sku": "BAK-003",
+    "name": "Traditional French Crusty Baguette 300g",
+    "brand": "In-Store Artisan Bakery",
+    "category": "Bakery",
+    "price": 2.49,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 30,
+    "unit": "300g loaf",
+    "location": {
+      "aisle": "Bakery Department",
+      "shelf": "Display Rack 2",
+      "section": "Fresh Bread"
+    },
+    "keywords": [
+      "baguette",
+      "french bread",
+      "crusty bread",
+      "bread"
+    ],
+    "is_promotional": false
+  },
+  {
+    "sku": "BAK-004",
+    "name": "100% Whole Wheat Sandwich Bread 650g",
+    "brand": "GoldenHarvest",
+    "category": "Bakery",
+    "price": 2.99,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 35,
+    "unit": "650g loaf",
+    "location": {
+      "aisle": "Bakery Department",
+      "shelf": "Shelf B2",
+      "section": "Sliced Bread"
+    },
+    "keywords": [
+      "whole wheat bread",
+      "wheat bread",
+      "brown bread",
+      "sandwich bread",
+      "bread"
+    ],
+    "is_promotional": false
+  },
+  {
+    "sku": "BAK-005",
+    "name": "All-Butter Flaky French Croissants (4 Pack)",
+    "brand": "In-Store Artisan Bakery",
+    "category": "Bakery",
+    "price": 4.99,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 16,
+    "unit": "4 pack",
+    "location": {
+      "aisle": "Bakery Department",
+      "shelf": "Pastry Case 1",
+      "section": "Pastries"
+    },
+    "keywords": [
+      "croissant",
+      "croissants",
+      "pastry",
+      "french pastry"
+    ],
+    "is_promotional": true
+  },
+  {
+    "sku": "MEAT-001",
+    "name": "Fresh Boneless Skinless Chicken Breast 500g",
+    "brand": "PrimeFarm Poultry",
+    "category": "Meat & Poultry",
+    "price": 6.99,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 25,
+    "unit": "500g tray",
+    "location": {
+      "aisle": "Aisle 2",
+      "shelf": "Meat Chiller 1",
+      "section": "Fresh Poultry"
+    },
+    "keywords": [
+      "chicken",
+      "chicken breast",
+      "poultry",
+      "meat",
+      "raw chicken"
+    ],
+    "is_promotional": false
+  },
+  {
+    "sku": "MEAT-002",
+    "name": "Premium Lean Ground Beef 85/15 500g",
+    "brand": "AngusSelect",
+    "category": "Meat & Poultry",
+    "price": 5.99,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 28,
+    "unit": "500g pack",
+    "location": {
+      "aisle": "Aisle 2",
+      "shelf": "Meat Chiller 2",
+      "section": "Fresh Beef"
+    },
+    "keywords": [
+      "beef",
+      "ground beef",
+      "mince",
+      "hamburger meat",
+      "meat"
+    ],
+    "is_promotional": true
+  },
+  {
+    "sku": "MEAT-003",
+    "name": "Fresh Atlantic Salmon Fillet Skin-On 300g",
+    "brand": "OceanCatch",
+    "category": "Seafood",
+    "price": 8.99,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 18,
+    "unit": "300g pack",
+    "location": {
+      "aisle": "Aisle 2",
+      "shelf": "Seafood Chiller",
+      "section": "Fresh Fish"
+    },
+    "keywords": [
+      "salmon",
+      "fish",
+      "salmon fillet",
+      "seafood",
+      "fresh fish"
+    ],
+    "is_promotional": false
+  },
+  {
+    "sku": "PAN-001",
+    "name": "Authentic Italian Spaghetti Pasta 500g",
+    "brand": "Barilla Classics",
+    "category": "Pantry & Pasta",
+    "price": 1.89,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 65,
+    "unit": "500g box",
+    "location": {
+      "aisle": "Aisle 3",
+      "shelf": "Shelf B",
+      "section": "Pasta & Noodles"
+    },
+    "keywords": [
+      "pasta",
+      "spaghetti",
+      "noodles",
+      "italian pasta"
+    ],
+    "is_promotional": false
+  },
+  {
+    "sku": "PAN-002",
+    "name": "Traditional Basil Marinara Pasta Sauce 680g",
+    "brand": "Nonna Kitchen",
+    "category": "Pantry & Pasta",
+    "price": 2.99,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 42,
+    "unit": "680g jar",
+    "location": {
+      "aisle": "Aisle 3",
+      "shelf": "Shelf C",
+      "section": "Pasta Sauce"
+    },
+    "keywords": [
+      "pasta sauce",
+      "marinara",
+      "tomato sauce",
+      "spaghetti sauce"
+    ],
+    "is_promotional": true
+  },
+  {
+    "sku": "PAN-003",
+    "name": "Cold Pressed Extra Virgin Olive Oil 750ml",
+    "brand": "TuscanGrove",
+    "category": "Pantry & Oils",
+    "price": 8.49,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 30,
+    "unit": "750ml bottle",
+    "location": {
+      "aisle": "Aisle 3",
+      "shelf": "Shelf A",
+      "section": "Cooking Oils"
+    },
+    "keywords": [
+      "olive oil",
+      "extra virgin olive oil",
+      "cooking oil",
+      "oil"
+    ],
+    "is_promotional": false
+  },
+  {
+    "sku": "PAN-004",
+    "name": "Fragrant Jasmine Long Grain White Rice 1kg",
+    "brand": "RoyalGrain",
+    "category": "Pantry & Grains",
+    "price": 3.49,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 40,
+    "unit": "1kg bag",
+    "location": {
+      "aisle": "Aisle 3",
+      "shelf": "Shelf D",
+      "section": "Rice & Grains"
+    },
+    "keywords": [
+      "rice",
+      "jasmine rice",
+      "white rice",
+      "grains"
+    ],
+    "is_promotional": false
+  },
+  {
+    "sku": "PAN-005",
+    "name": "Creamy Natural Roasted Peanut Butter 500g",
+    "brand": "NutriPure",
+    "category": "Pantry & Spreads",
+    "price": 3.99,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 32,
+    "unit": "500g jar",
+    "location": {
+      "aisle": "Aisle 4",
+      "shelf": "Shelf B",
+      "section": "Spreads & Jams"
+    },
+    "keywords": [
+      "peanut butter",
+      "pb",
+      "spread",
+      "nuts spread"
+    ],
+    "is_promotional": false
+  },
+  {
+    "sku": "PAN-006",
+    "name": "100% Pure Organic Clover Honey 375g",
+    "brand": "NatureGold",
+    "category": "Pantry & Spreads",
+    "price": 4.99,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 25,
+    "unit": "375g squeeze bottle",
+    "location": {
+      "aisle": "Aisle 4",
+      "shelf": "Shelf A",
+      "section": "Honey & Syrups"
+    },
+    "keywords": [
+      "honey",
+      "clover honey",
+      "sweetener",
+      "organic honey"
+    ],
+    "is_promotional": false
+  },
+  {
+    "sku": "BRK-001",
+    "name": "Medium Roast Colombian Ground Coffee 340g",
+    "brand": "RoasterCraft",
+    "category": "Breakfast & Coffee",
+    "price": 7.99,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 36,
+    "unit": "340g bag",
+    "location": {
+      "aisle": "Aisle 4",
+      "shelf": "Shelf C",
+      "section": "Coffee & Tea"
+    },
+    "keywords": [
+      "coffee",
+      "ground coffee",
+      "colombian coffee",
+      "espresso",
+      "caffeine"
+    ],
+    "is_promotional": true
+  },
+  {
+    "sku": "BRK-002",
+    "name": "Honey Nut Toasted Whole Oat Cereal 450g",
+    "brand": "MorningCrunch",
+    "category": "Breakfast & Cereals",
+    "price": 4.29,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 30,
+    "unit": "450g box",
+    "location": {
+      "aisle": "Aisle 4",
+      "shelf": "Shelf D",
+      "section": "Breakfast Cereals"
+    },
+    "keywords": [
+      "cereal",
+      "cheerios",
+      "oats cereal",
+      "breakfast cereal",
+      "corn flakes"
+    ],
+    "is_promotional": false
+  },
+  {
+    "sku": "SNK-002",
+    "name": "Stone Ground White Corn Tortilla Chips 250g",
+    "brand": "CantinaStyle",
+    "category": "Snacks",
+    "price": 3.29,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 45,
+    "unit": "250g bag",
+    "location": {
+      "aisle": "Aisle 5",
+      "shelf": "Shelf B",
+      "section": "Chips & Pretzels"
+    },
+    "keywords": [
+      "tortilla chips",
+      "corn chips",
+      "nachos",
+      "chips",
+      "salsa chips"
+    ],
+    "is_promotional": true
+  },
+  {
+    "sku": "SNK-003",
+    "name": "70% Rich Dark Chocolate Bar 100g",
+    "brand": "SwissArtisan",
+    "category": "Snacks & Confectionery",
+    "price": 2.79,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 50,
+    "unit": "100g bar",
+    "location": {
+      "aisle": "Aisle 5",
+      "shelf": "Shelf D",
+      "section": "Chocolates"
+    },
+    "keywords": [
+      "chocolate",
+      "dark chocolate",
+      "candy",
+      "chocolate bar"
+    ],
+    "is_promotional": false
+  },
+  {
+    "sku": "FRZ-001",
+    "name": "Rich Madagascar Vanilla Bean Ice Cream 1L",
+    "brand": "CreamyTreats",
+    "category": "Frozen",
+    "price": 4.99,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 25,
+    "unit": "1L tub",
+    "location": {
+      "aisle": "Aisle 7",
+      "shelf": "Freezer Door 3",
+      "section": "Ice Cream"
+    },
+    "keywords": [
+      "ice cream",
+      "vanilla ice cream",
+      "dessert",
+      "frozen treat"
+    ],
+    "is_promotional": true
+  },
+  {
+    "sku": "FRZ-002",
+    "name": "Wood-Fired Crust Pepperoni Pizza 420g",
+    "brand": "PizzeriaDelight",
+    "category": "Frozen",
+    "price": 5.99,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 28,
+    "unit": "420g box",
+    "location": {
+      "aisle": "Aisle 7",
+      "shelf": "Freezer Door 1",
+      "section": "Frozen Pizza"
+    },
+    "keywords": [
+      "pizza",
+      "frozen pizza",
+      "pepperoni pizza",
+      "frozen dinner"
+    ],
+    "is_promotional": false
+  },
+  {
+    "sku": "HOU-001",
+    "name": "Ultra Absorbent Paper Towels (6 Double Rolls)",
+    "brand": "CleanNest",
+    "category": "Household",
+    "price": 7.49,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 35,
+    "unit": "6 roll pack",
+    "location": {
+      "aisle": "Aisle 8",
+      "shelf": "Shelf A",
+      "section": "Paper Goods"
+    },
+    "keywords": [
+      "paper towel",
+      "paper towels",
+      "tissues",
+      "kitchen paper",
+      "cleaning"
+    ],
+    "is_promotional": false
+  },
+  {
+    "sku": "HOU-002",
+    "name": "Concentrated Citrus Dishwashing Liquid 500ml",
+    "brand": "EcoClean",
+    "category": "Household",
+    "price": 2.69,
+    "currency": "$",
+    "in_stock": true,
+    "stock_quantity": 40,
+    "unit": "500ml bottle",
+    "location": {
+      "aisle": "Aisle 8",
+      "shelf": "Shelf B",
+      "section": "Dish Care"
+    },
+    "keywords": [
+      "dish soap",
+      "soap",
+      "dishwashing liquid",
+      "detergent",
+      "cleaning"
+    ],
+    "is_promotional": false
+  }
+]

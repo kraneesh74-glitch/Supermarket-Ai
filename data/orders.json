@@ -1,0 +1,54 @@
+[
+  {
+    "order_id": "ORD-9481",
+    "customer_phone": "+15551234567",
+    "customer_name": "Sarah Miller",
+    "store_id": "STORE-001",
+    "type": "Click & Collect",
+    "status": "Ready for Pickup",
+    "created_at": "2026-11-11T07:15:00Z",
+    "estimated_ready": "2026-11-11T08:00:00Z",
+    "pickup_bay": "Bay 2",
+    "items": [
+      {"sku": "DAI-001", "name": "Farm Fresh Whole Milk 1L", "quantity": 2, "price": 2.49},
+      {"sku": "EGG-001", "name": "Free Range Large Brown Eggs (12 Pack)", "quantity": 1, "price": 4.89},
+      {"sku": "BAK-001", "name": "Artisan Sourdough Loaf 500g", "quantity": 1, "price": 4.29}
+    ],
+    "total_amount": 14.16,
+    "payment_status": "Paid Online"
+  },
+  {
+    "order_id": "ORD-9482",
+    "customer_phone": "+15559876543",
+    "customer_name": "David Chen",
+    "store_id": "STORE-001",
+    "type": "Home Delivery",
+    "status": "Out for Delivery",
+    "created_at": "2026-11-11T06:30:00Z",
+    "estimated_delivery": "2026-11-11T09:30:00Z",
+    "driver_name": "Carlos M.",
+    "items": [
+      {"sku": "PROD-001", "name": "Hass Avocados (2 Pack)", "quantity": 3, "price": 2.99},
+      {"sku": "SNK-001", "name": "Sea Salt Kettle Cooked Potato Chips 150g", "quantity": 2, "price": 2.50}
+    ],
+    "total_amount": 13.97,
+    "payment_status": "Paid Online"
+  },
+  {
+    "order_id": "ORD-9483",
+    "customer_phone": "+15555551212",
+    "customer_name": "Elena Rostova",
+    "store_id": "STORE-002",
+    "type": "Click & Collect",
+    "status": "Packing in Progress",
+    "created_at": "2026-11-11T08:10:00Z",
+    "estimated_ready": "2026-11-11T09:15:00Z",
+    "pickup_bay": "Assigned upon completion",
+    "items": [
+      {"sku": "DAI-002", "name": "Organic Almond Milk Unsweetened 1L", "quantity": 2, "price": 3.99}
+    ],
+    "total_amount": 7.98,
+    "payment_status": "Paid Online"
+  }
+]
+

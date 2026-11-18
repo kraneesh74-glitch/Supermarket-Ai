@@ -1,0 +1,66 @@
+[
+  {
+    "store_id": "STORE-001",
+    "name": "SuperMart Downtown Flagship",
+    "address": "100 Market Street, City Center, Metro City",
+    "phone": "+1 (555) 234-5678",
+    "operating_hours": {
+      "monday": "07:00 - 22:00",
+      "tuesday": "07:00 - 22:00",
+      "wednesday": "07:00 - 22:00",
+      "thursday": "07:00 - 22:00",
+      "friday": "07:00 - 23:00",
+      "saturday": "08:00 - 23:00",
+      "sunday": "08:00 - 20:00"
+    },
+    "departments": {
+      "bakery": "Open daily 07:00 - 20:00 (Fresh batches at 07:30 and 14:00)",
+      "deli": "Open daily 08:00 - 20:00",
+      "pharmacy": "Mon-Fri 09:00 - 19:00, Sat 10:00 - 16:00, Sun Closed",
+      "customer_service_desk": "Open during all store operating hours"
+    },
+    "amenities": [
+      "Underground Parking (Free 2 hours for shoppers with receipt over $15, 150 stalls)",
+      "Click & Collect dedicated bays at Bay 1 to 4",
+      "Wheelchair accessible entrances and motorized carts",
+      "Self-checkout kiosks (12 lanes)"
+    ],
+    "policies": {
+      "returns": "Returns accepted within 14 days with original receipt for non-perishable unopened goods. Perishable items (meat, produce, dairy) must be reported within 24 hours at the in-store customer service desk. Chat agent cannot issue cash refunds directly.",
+      "pets": "Service animals welcome. Non-service pets are not permitted due to public food safety regulations.",
+      "accepted_payments": ["Visa", "Mastercard", "American Express", "Apple Pay", "Google Pay", "Cash at checkout", "SuperMart Gift Cards"]
+    }
+  },
+  {
+    "store_id": "STORE-002",
+    "name": "SuperMart Westside Suburban",
+    "address": "450 West Boulevard, Westside Plaza",
+    "phone": "+1 (555) 876-5432",
+    "operating_hours": {
+      "monday": "08:00 - 21:00",
+      "tuesday": "08:00 - 21:00",
+      "wednesday": "08:00 - 21:00",
+      "thursday": "08:00 - 21:00",
+      "friday": "08:00 - 22:00",
+      "saturday": "08:00 - 22:00",
+      "sunday": "09:00 - 19:00"
+    },
+    "departments": {
+      "bakery": "Open daily 08:00 - 19:00",
+      "deli": "Open daily 09:00 - 19:00",
+      "pharmacy": "Mon-Fri 09:00 - 18:00, Sat 09:00 - 14:00, Sun Closed",
+      "customer_service_desk": "Open during store hours"
+    },
+    "amenities": [
+      "Surface lot parking (Free unlimited parking)",
+      "Drive-up Click & Collect pickup lanes 1-6",
+      "EV Charging Stations (4 Tesla, 4 Universal ChargePoint)"
+    ],
+    "policies": {
+      "returns": "Standard 14-day return policy at customer service desk with receipt.",
+      "pets": "Service animals only.",
+      "accepted_payments": ["Visa", "Mastercard", "Amex", "Mobile Pay", "Cash", "Store Gift Card"]
+    }
+  }
+]
+

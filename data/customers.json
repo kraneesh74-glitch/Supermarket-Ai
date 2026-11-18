@@ -1,0 +1,33 @@
+[
+  {
+    "customer_id": "CUST-101",
+    "name": "Sarah Miller",
+    "phone": "+15551234567",
+    "loyalty_tier": "Gold",
+    "loyalty_points": 850,
+    "preferred_store_id": "STORE-001",
+    "dietary_preferences": ["Organic", "Sourdough enthusiast"],
+    "recent_orders": ["ORD-9481"]
+  },
+  {
+    "customer_id": "CUST-102",
+    "name": "David Chen",
+    "phone": "+15559876543",
+    "loyalty_tier": "Silver",
+    "loyalty_points": 320,
+    "preferred_store_id": "STORE-001",
+    "dietary_preferences": ["Dairy-free"],
+    "recent_orders": ["ORD-9482"]
+  },
+  {
+    "customer_id": "CUST-103",
+    "name": "Elena Rostova",
+    "phone": "+15555551212",
+    "loyalty_tier": "Platinum",
+    "loyalty_points": 2400,
+    "preferred_store_id": "STORE-002",
+    "dietary_preferences": ["Vegetarian"],
+    "recent_orders": ["ORD-9483"]
+  }
+]
+

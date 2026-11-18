@@ -1,0 +1,37 @@
+[
+  {
+    "promo_id": "PR-001",
+    "title": "Plant-Based Breakfast Week",
+    "description": "Buy 1 Organic Almond Milk 1L, get the second at 50% off.",
+    "category": "Dairy Alternatives",
+    "applicable_skus": ["DAI-002"],
+    "discount_type": "BOGO50",
+    "start_date": "2026-11-01",
+    "end_date": "2026-11-15",
+    "member_only": false
+  },
+  {
+    "promo_id": "PR-002",
+    "title": "Weekend Snack Blast",
+    "description": "CrunchCo Sea Salt Kettle Chips 150g - 2 bags for $5.00 (Save $1.98).",
+    "category": "Snacks",
+    "applicable_skus": ["SNK-001"],
+    "discount_type": "BUNDLE",
+    "deal_price": 5.00,
+    "start_date": "2026-11-07",
+    "end_date": "2026-11-14",
+    "member_only": false
+  },
+  {
+    "promo_id": "PR-003",
+    "title": "Loyalty Gold Club Double Points",
+    "description": "Earn 2x SuperPoints on all in-store bakery fresh sourdough and breads this week.",
+    "category": "Bakery",
+    "applicable_skus": ["BAK-001"],
+    "discount_type": "2X_POINTS",
+    "start_date": "2026-11-08",
+    "end_date": "2026-11-20",
+    "member_only": true
+  }
+]
+
