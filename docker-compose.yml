@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  supermart-agent:
+    build: .
+    container_name: supermart_ai_agent
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+      - WHATSAPP_VERIFY_TOKEN=SUPERMART_WA_VERIFY_TOKEN_2026
+      - WHATSAPP_APP_SECRET=supermart_secret_key
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
