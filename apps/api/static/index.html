@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SuperMart AI In-Store Associate</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background-color: #f0fdf4; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 16px; }
+    
+    .chat-container {
+      width: 100%;
+      max-width: 460px;
+      height: 720px;
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 14px 35px rgba(5, 150, 105, 0.12), 0 4px 12px rgba(0,0,0,0.06);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid #d1fae5;
+    }
+    
+    .chat-header {
+      background: linear-gradient(135deg, #059669 0%, #047857 100%);
+      color: white;
+      padding: 16px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .chat-header .avatar {
+      width: 44px;
+      height: 44px;
+      background: rgba(255,255,255,0.22);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .chat-header .title { font-weight: 700; font-size: 16px; letter-spacing: -0.2px; }
+    .chat-header .status { font-size: 12px; opacity: 0.92; display: flex; align-items: center; gap: 6px; margin-top: 2px; }
+    .status-dot { width: 8px; height: 8px; background: #34d399; border-radius: 50%; display: inline-block; box-shadow: 0 0 6px #34d399; }
+    
+    .key-btn {
+      background: rgba(255,255,255,0.18);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 6px 10px;
+      border-radius: 12px;
+      font-size: 11px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.2s;
+    }
+    .key-btn:hover { background: rgba(255,255,255,0.3); }
+
+    .chat-messages {
+      flex: 1;
+      padding: 16px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background: #f9fafb;
+    }
+    
+    .msg {
+      max-width: 86%;
+      padding: 12px 16px;
+      border-radius: 16px;
+      font-size: 14px;
+      line-height: 1.5;
+      word-wrap: break-word;
+    }
+    .msg.bot {
+      background: white;
+      color: #1f2937;
+      border: 1px solid #e5e7eb;
+      align-self: flex-start;
+      border-bottom-left-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    }
+    .msg.user {
+      background: linear-gradient(135deg, #059669 0%, #047857 100%);
+      color: white;
+      align-self: flex-end;
+      border-bottom-right-radius: 4px;
+      box-shadow: 0 2px 6px rgba(5, 150, 105, 0.2);
+    }
+    .msg.system-escalated {
+      background: #fef2f2;
+      color: #991b1b;
+      border: 1px solid #fecaca;
+      font-size: 13px;
+      align-self: center;
+      width: 95%;
+      text-align: center;
+      border-radius: 12px;
+    }
+
+    .chips-container {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      padding: 10px 14px;
+      background: white;
+      border-top: 1px solid #f3f4f6;
+      scrollbar-width: none;
+    }
+    .chips-container::-webkit-scrollbar { display: none; }
+    .chip {
+      background: #ecfdf5;
+      color: #047857;
+      border: 1px solid #a7f3d0;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 500;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .chip:hover { background: #d1fae5; transform: translateY(-1px); }
+
+    .chat-input-area {
+      padding: 12px 14px;
+      background: white;
+      border-top: 1px solid #e5e7eb;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .chat-input {
+      flex: 1;
+      padding: 12px 16px;
+      border: 1.5px solid #d1d5db;
+      border-radius: 24px;
+      outline: none;
+      font-size: 14px;
+      transition: border-color 0.2s;
+    }
+    .chat-input:focus { border-color: #059669; }
+    .send-btn {
+      background: #059669;
+      color: white;
+      border: none;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background 0.2s;
+      flex-shrink: 0;
+    }
+    .send-btn:hover { background: #047857; }
+
+    /* CSAT Survey Box */
+    .csat-box {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 12px;
+      margin: 6px 0;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+    .csat-stars { display: flex; justify-content: center; gap: 8px; margin: 8px 0; }
+    .star { font-size: 24px; cursor: pointer; color: #d1d5db; transition: color 0.15s; }
+    .star:hover, .star.selected { color: #f59e0b; }
+
+    /* Key Modal */
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.4);
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal {
+      background: white;
+      border-radius: 16px;
+      padding: 20px;
+      width: 90%;
+      max-width: 380px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    .modal h3 { font-size: 16px; margin-bottom: 8px; color: #111827; }
+    .modal p { font-size: 12px; color: #4b5563; margin-bottom: 12px; line-height: 1.4; }
+    .modal input { width: 100%; padding: 10px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 13px; margin-bottom: 14px; }
+    .modal-actions { display: flex; justify-content: flex-end; gap: 8px; }
+    .btn-secondary { background: #e5e7eb; border: none; padding: 8px 14px; border-radius: 8px; font-size: 13px; cursor: pointer; }
+    .btn-primary { background: #059669; color: white; border: none; padding: 8px 14px; border-radius: 8px; font-size: 13px; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+  <div class="chat-container">
+    <div class="chat-header">
+      <div class="header-left">
+        <div class="avatar">👨‍💼</div>
+        <div>
+          <div class="title">Alex • SuperMart Associate</div>
+          <div class="status"><span class="status-dot"></span> In-store live inventory & grocery assistant</div>
+        </div>
+      </div>
+      <button class="key-btn" onclick="openKeyModal()" title="Optional Gemini/OpenAI API Key">⚙️ AI Mode</button>
+    </div>
+
+    <div class="chat-messages" id="messages">
+      <div class="msg bot">
+        Hey there! 👋 I'm <strong>Alex</strong>, your in-store assistant at SuperMart.
+        <br><br>
+        Ask me about any grocery item, live shelf stock, exact aisles, store hours, weekly deals, recipe ideas, or track an order! What can I help you pick up today?
+      </div>
+    </div>
+
+    <!-- Quick action chips -->
+    <div class="chips-container" id="chips">
+      <div class="chip" onclick="sendQuickMessage('Are avocados in stock?')">🥑 Avocados in stock?</div>
+      <div class="chip" onclick="sendQuickMessage('Where can I find fresh apples?')">🍎 Fresh apples</div>
+      <div class="chip" onclick="sendQuickMessage('How much is the fresh chicken breast?')">🍗 Chicken breast</div>
+      <div class="chip" onclick="sendQuickMessage('What time does the store close tonight?')">⏰ Store hours</div>
+      <div class="chip" onclick="sendQuickMessage('What active deals do you have on snacks?')">🏷️ Weekly specials</div>
+      <div class="chip" onclick="sendQuickMessage('What ingredients do I need for fresh guacamole?')">🥑 Guacamole recipe</div>
+      <div class="chip" onclick="sendQuickMessage('Where is my order ORD-9481?')">📦 Track ORD-9481</div>
+    </div>
+
+    <div class="chat-input-area">
+      <input type="text" id="userInput" class="chat-input" placeholder="Ask about any item, aisle, hours, or order..." onkeydown="handleKey(event)">
+      <button class="send-btn" onclick="sendMessage()">➤</button>
+    </div>
+  </div>
+
+  <!-- API Key Modal -->
+  <div class="modal-backdrop" id="keyModal" onclick="closeKeyModal(event)">
+    <div class="modal" onclick="event.stopPropagation()">
+      <h3>⚙️ AI Engine Settings</h3>
+      <p>By default, SuperMart uses our high-speed, in-store <strong>Supermarket Associate AI</strong>. If you want to connect your own Google Gemini or OpenAI API key, paste it below:</p>
+      <input type="password" id="customApiKey" placeholder="AIzaSy... (Gemini) or sk-... (OpenAI)">
+      <div class="modal-actions">
+        <button class="btn-secondary" onclick="clearApiKey()">Reset to Default</button>
+        <button class="btn-primary" onclick="saveApiKey()">Save & Apply</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const sessionId = localStorage.getItem("supermart_session_id") || "web_" + Math.random().toString(36).substring(2, 9);
+    localStorage.setItem("supermart_session_id", sessionId);
+
+    let currentApiKey = localStorage.getItem("supermart_custom_api_key") || "";
+
+    const messagesContainer = document.getElementById("messages");
+    const userInput = document.getElementById("userInput");
+
+    function renderMarkdown(text) {
+      if (!text) return "";
+      // Escape HTML
+      let html = text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+
+      // Bold **text**
+      html = html.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+      // Inline code `code`
+      html = html.replace(/`([^`]+)`/g, "<code style='background:#f3f4f6;padding:2px 4px;border-radius:4px;'>$1</code>");
+      // Line breaks
+      html = html.replace(/\n/g, "<br>");
+      return html;
+    }
+
+    function addMessage(text, role, isHtml = false) {
+      const msg = document.createElement("div");
+      msg.className = `msg ${role}`;
+      if (isHtml) {
+        msg.innerHTML = text;
+      } else {
+        msg.innerHTML = renderMarkdown(text);
+      }
+      messagesContainer.appendChild(msg);
+      messagesContainer.scrollTop = messagesContainer.scrollHeight;
+      return msg;
+    }
+
+    function handleKey(e) {
+      if (e.key === "Enter") sendMessage();
+    }
+
+    function sendQuickMessage(text) {
+      userInput.value = text;
+      sendMessage();
+    }
+
+    async function sendMessage() {
+      const text = userInput.value.trim();
+      if (!text) return;
+
+      addMessage(text, "user");
+      userInput.value = "";
+
+      const botBubble = addMessage("<span style='color:#6b7280;'>Checking aisles & store systems...</span>", "bot", true);
+
+      try {
+        const payload = {
+          message: text,
+          session_id: sessionId,
+          customer_phone: "+15551234567"
+        };
+        if (currentApiKey) {
+          payload.api_key = currentApiKey;
+        }
+
+        const res = await fetch("/api/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        botBubble.innerHTML = renderMarkdown(data.reply);
+
+        if (data.escalated) {
+          const escNote = document.createElement("div");
+          escNote.className = "msg system-escalated";
+          escNote.textContent = "Agent escalated request to in-store human customer service desk.";
+          messagesContainer.appendChild(escNote);
+        } else if (data.contained && Math.random() > 0.6) {
+          showCSAT();
+        }
+      } catch (err) {
+        botBubble.innerHTML = "Sorry, I am having trouble checking store systems right now. Please try again in a moment!";
+      }
+      messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+
+    function showCSAT() {
+      if (document.getElementById("csat-box")) return;
+      const box = document.createElement("div");
+      box.id = "csat-box";
+      box.className = "csat-box";
+      box.innerHTML = `
+        <div style="font-size:12px;color:#4b5563;font-weight:500;">Was this supermarket assistance helpful?</div>
+        <div class="csat-stars">
+          <span class="star" onclick="rateCSAT(1)">★</span>
+          <span class="star" onclick="rateCSAT(2)">★</span>
+          <span class="star" onclick="rateCSAT(3)">★</span>
+          <span class="star" onclick="rateCSAT(4)">★</span>
+          <span class="star" onclick="rateCSAT(5)">★</span>
+        </div>
+      `;
+      messagesContainer.appendChild(box);
+      messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+
+    async function rateCSAT(score) {
+      const box = document.getElementById("csat-box");
+      if (box) box.innerHTML = `<div style="font-size:13px;color:#059669;font-weight:600;">✓ Thank you! Rated ${score}/5 stars.</div>`;
+      await fetch("/api/csat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ session_id: sessionId, rating: score })
+      });
+    }
+
+    function openKeyModal() {
+      document.getElementById("customApiKey").value = currentApiKey;
+      document.getElementById("keyModal").style.display = "flex";
+    }
+    function closeKeyModal() {
+      document.getElementById("keyModal").style.display = "none";
+    }
+    function saveApiKey() {
+      const val = document.getElementById("customApiKey").value.trim();
+      currentApiKey = val;
+      if (val) {
+        localStorage.setItem("supermart_custom_api_key", val);
+        alert("API Key saved! Requests will now use your cloud LLM.");
+      } else {
+        localStorage.removeItem("supermart_custom_api_key");
+        alert("Using default built-in Supermarket Associate AI.");
+      }
+      closeKeyModal();
+    }
+    function clearApiKey() {
+      currentApiKey = "";
+      localStorage.removeItem("supermart_custom_api_key");
+      document.getElementById("customApiKey").value = "";
+      alert("Switched back to built-in Supermarket Associate AI.");
+      closeKeyModal();
+    }
+  </script>
+</body>
+</html>
